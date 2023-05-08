@@ -44,7 +44,7 @@ public class UserContoller {
     }
 
     @GetMapping("/{id}/edit")
-    public String edit(Model model, @PathVariable("id") Integer id) {
+    public String getEditForm(Model model, @PathVariable("id") Integer id) {
         model.addAttribute("user", userService.show(id));
         return "user/edit";
     }
